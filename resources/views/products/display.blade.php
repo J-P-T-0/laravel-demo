@@ -19,25 +19,25 @@
                     Disponible: {{ $product->stock }} {{ $product->stock === 1 ? 'unidad' : 'unidades' }}
                 </p>
                 @if ($product->stock > 0)
-                    <form method="POST" action="{{ route('cart.agregar', $product) }}" class="d-flex flex-column w-100 align-items-center mb-3">
+                    <form method="POST" action="{{ route('cart.agregar', $product) }}" class="item-controls mb-0">
                         @csrf
-                        <div class="input-group d-flex align-items-center p-0" style="height: 50px">
-                            <button class="down-btn btn-minus btn btn-secondary rounded-start h-100" type="button" disabled="disabled"><i class="bi bi-dash-lg h4"></i></button>
-                            <input
-                                type="number"
-                                name="cantidad"
-                                min="1"
-                                max="{{ $product->stock }}"
-                                value="1"
-                                readonly
-                                class="form-control rounded-0 m-0 number-input text-center w-25 h-100"
-                                style="background-color: #f8f8f8"
-                            >
-                            <button class="up-btn btn-plus btn btn-secondary rounded-end h-100 me-2" type="button"><i class="bi bi-plus-lg h4"></i></button>
-                            <button type="submit" class="btn btn-warning rounded m-0 w-50 h-100 ms-2">
-                                <i class="bi bi-cart h4"></i>
-                            </button>
-                        </div>
+                        <button class="down-btn btn btn-secondary" type="button" disabled="disabled"><i class="bi bi-dash-lg h4"></i></button>
+                        <input
+                            type="number"
+                            name="cantidad"
+                            min="1"
+                            max="{{ $product->stock }}"
+                            value="1"
+                            readonly
+                            class="form-control rounded-0 m-0 number-input text-center w-25"
+                            style="background-color: #f8f8f8"
+                        >
+                        <button class="up-btn btn btn-secondary" type="button"><i class="bi bi-plus-lg h4"></i></button>
+
+
+                        <button type="submit" class="btn btn-warning btn-cart" >
+                            <i class="bi bi-cart h4"></i>
+                        </button>
                     </form>
                 @else
                     <button class="btn btn-secondary w-100 mb-3" disabled>Sin stock</button>
