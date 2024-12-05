@@ -110,7 +110,7 @@
                 <td>
                     <form action="{{ route('perfil.updateAddress', 'city') }}" method="POST" class="align-items-center d-md-flex">
                         @csrf
-                        <input type="email" name="value1" class="form-control" value="{{ $user->address->city }}" required>
+                        <input type="text" name="value1" class="form-control" value="{{ $user->address->city }}" required>
                         <button type="submit" class="btn btn-primary mt-2">Actualizar</button>
                     </form>
                 </td>
