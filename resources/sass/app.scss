@@ -1,0 +1,185 @@
+$warning: #fb9450;
+$secondary: #c6cbcf;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Edu+TAS+Beginner:wght@500&family=Geist:wght@100..900&family=Graduate&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.nav-item{
+    font-size: 1.2rem
+}
+
+.item-card{
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0;
+    object-fit: contain;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: #b6bbc3 1px solid;
+    border-radius: 0.5rem;
+}
+
+.item-info{
+    width: 60%;
+}
+
+.item-img{
+    height: clamp(150px,20vw,200px);
+    border-radius: 8px;
+    width: min-content;
+}
+
+.item-name{
+    font-size: 2.3rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    overflow: unset;
+}
+
+.item-category{
+    font-size: 1.5rem;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+}
+
+.item-price{
+    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    overflow-wrap: break-word;
+    color: #cf2c2e;
+}
+
+.item-desc{
+    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.item-controls{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    height: 50px;
+    .down-btn{
+        border-radius: 0.25rem 0 0 0.25rem;
+        height: 100%;
+        width: 15%;
+    }
+    input{
+        width: 15%;
+    }
+    .up-btn{
+        border-radius: 0 0.25rem 0.25rem 0;
+        height: 100%;
+        width: 15%;
+        margin-right: 0.5rem;
+    }
+    .cart-btn{
+        border-radius: 0.25rem;
+        height: 100%;
+        width: 50%;
+        margin-left: 0.5rem;
+    }
+}
+
+h1{
+    font-family: "Alata", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1.home{
+    font-family: "Graduate", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(3rem,10vw,8rem);
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@include media-breakpoint-up(md) {
+
+    .item-card{
+        height: 100%;
+        padding: 0;
+        object-fit: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border: #b6bbc3 1px solid;
+        border-radius: 0.5rem;
+    }
+
+    .item-img{
+        height: clamp(170px,15vw,200px);
+        border-radius: 8px;
+        width: min-content;
+
+    }
+
+    .item-info{
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .item-name{
+        font-size: 2.3rem;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 700;
+        overflow: unset;
+    }
+
+    .item-category{
+        font-size: 1.5rem;
+        font-family: "Bebas Neue", sans-serif;
+        text-transform: uppercase;
+    }
+
+    .item-price{
+        font-size: 2rem;
+        font-family: "Bebas Neue", sans-serif;
+        overflow-wrap: break-word;
+        color: #cf2c2e;
+    }
+
+    .item-controls{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+        gap: -1;
+        position: relative;
+
+        .down-btn{
+            border-radius: 0;
+            height: 50px;
+            width: 25%;
+        }
+        input{
+            width: 50%;
+            height: 50px;
+            flex-grow: 1;
+        }
+        .up-btn{
+            border-radius: 0;
+            height: 50px;
+            width: 25%;
+            margin: 0;
+        }
+        .btn-cart{
+            border-radius: 0 0 0.5rem 0.5rem;
+            height: 50px;
+            width: 100%;
+            margin: auto 0 0 0;
+        }
+    }
+}
+
+
