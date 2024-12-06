@@ -42,9 +42,9 @@
                                 </div>
 
                                 <!-- Input de Cantidad y Botones de + y - -->
-                                <div class="col-4 col-md-4 col-lg-3 p-0 border border-info">
-                                    <div class="w-100 border border-warning">
-                                        <form method="POST" action="{{ route('cart.update', $item->id) }}" class="item-controls cart-update mb-2 w-100 p-0 m-0 border border-danger">
+                                <div class="col-4 col-md-4 col-lg-3 p-0">
+                                    <div class="w-100">
+                                        <form method="POST" action="{{ route('cart.update', $item->id) }}" class="item-controls cart-update mb-2 w-100 p-0 m-0">
                                             @csrf
                                             @method('PATCH')
                                             <button class="down-btn btn btn-secondary rounded-start w-25" type="submit" {{ $item->quantity === 1 ? 'disabled' : '' }}>
