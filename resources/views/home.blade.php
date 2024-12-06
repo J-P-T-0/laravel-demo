@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid w-100 p-0 m-0" style="height: 91vh;background-image: url('{{asset('storage/image/fondo1.png')}}'); background-position: center;overflow-x: hidden">
+    <div class="container-fluid w-100 p-0 m-0" style="height: 91vh;background-image: url('{{asset('storage/image/fondo1.jpg')}}'); background-position: center;overflow-x: hidden">
         <div class="container-fluid w-100 h-100 m-0 d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,0.6)">
             <h1 class="text-light home">Gym Supplements</h1>
             <h2></h2>

@@ -17,6 +17,8 @@
 @endif
 <input type="file" class="form-control" name="image" id="image">
 
+<label for="category">Categoría</label><input type="text" class="form-control" name="category" id="category" value="{{ old('category', $product->category ?? '') }}">
+
 <label for="description">Descripción</label>
 <textarea name="description" class="form-control" style="height: 20vh" id="description">{{ old('description', $product->description ?? '') }}</textarea>
 
