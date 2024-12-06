@@ -1,4 +1,5 @@
 <x-layout>
+    <a href="{{route('products.control.create')}}" class="btn btn-warning">Nuevo producto</a>
     <div class="container-fluid px-5 d-flex flex-column align-items-center">
         <table class="table table-striped table-sm" style="font-size: 1.5rem">
             <thead>
